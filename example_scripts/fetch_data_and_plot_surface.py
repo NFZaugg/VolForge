@@ -1,8 +1,6 @@
 import logging
 from datetime import date
 
-from matplotlib import pyplot as plt
-
 from slicer.slicer import Slicer
 from surface.linear_surface import LinearSurface
 from theta_data.options_theta_data_fetcher import OptionsThetaDataFetcher
@@ -36,7 +34,6 @@ if __name__ == "__main__":
     ).construct_slices(cleaned_data_per_expiry)
     for slice in slices:
         SlicePlotter(dark_theme=True).plot(symbol, slice)
-        plt.show()
 
     surface = LinearSurface.construct_from_slices(
         base_date, spot=spot_price, slices=slices
@@ -47,5 +44,3 @@ if __name__ == "__main__":
         underlying=symbol,
         surface=surface,
     )
-
-    plt.savefig("surface.png", dpi=200)
