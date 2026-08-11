@@ -16,6 +16,9 @@
 - Constructs implied vol surface for bid/ask/mid - using both Put and Call quotes
 - Visualizes the data
 
+Examples
 
-<img width="1280" height="960" alt="slice" src="https://github.com/user-attachments/assets/725bc546-c930-42a5-aee1-5a32d7032145" />
+<img width="2000" height="1200" alt="slice" src="https://github.com/user-attachments/assets/beec6465-8d20-49e5-a4dd-987843fcf5cd" />
 
+
+<img width="2000" height="1200" alt="surface" src="https://github.com/user-attachments/assets/bc4befa6-aabd-4c62-bf0d-d8453b3a1814" />
