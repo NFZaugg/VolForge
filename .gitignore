@@ -1,0 +1,10 @@
+__pycache__/
+/.env
+/documentation
+.pytest_cache/
+/.env
+.venv/
+*.parquet
+# uv
+uv.lock
+.python-version

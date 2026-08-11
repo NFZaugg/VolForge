@@ -1,0 +1,18 @@
+[project]
+name = "spx-surface"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "matplotlib>=3.11.0",
+    "pandera[polars]>=0.32.0",
+    "polars>=1.42.0",
+    "pyarrow>=24.0.0",
+    "pydantic>=2.13.4",
+    "pydantic-settings>=2.14.2",
+    "pyqt6>=6.11.0",
+    "pytest>=9.1.1",
+    "scipy>=1.18.0",
+    "thetadata>=1.0.9",
+]

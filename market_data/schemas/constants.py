@@ -1,0 +1,8 @@
+COLUMN_EXPIRY_DATE = "expiry_date"
+COLUMN_FORWARD = "forward"
+COLUMN_VALUE_DATETIME = "value_datetime"
+COLUMN_TTM = "ttm"
+COLUMN_STRIKE = "strike"
+COLUMN_MID_IMPLIED_VOL = "mid_implied_vol"
+COLUMN_ASK_IMPLIED_VOL = "ask_implied_vol"
+COLUMN_BID_IMPLIED_VOL = "bid_implied_vol"
