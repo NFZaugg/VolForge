@@ -4,7 +4,7 @@
 
 - Checkout repo
 - use `uv sync` to create venv
-- Add '.env. file with [Thetadata](https://www.thetadata.net/) API key
+- Add `.env.` file with [Thetadata](https://www.thetadata.net/) API key
   
   THETADATA_API_KEY="your_api_key_here"
   
@@ -23,3 +23,5 @@ Examples
 
 
 <img width="2000" height="1200" alt="surface" src="https://github.com/user-attachments/assets/bc4befa6-aabd-4c62-bf0d-d8453b3a1814" />
+
+May be used freely for non-commerical / research projects
