@@ -3,6 +3,7 @@
 # Quickstart
 
 - Checkout repo
+- use `uv sync` to create venv
 - Add '.env. file with [Thetadata](https://www.thetadata.net/) API key
   
   THETADATA_API_KEY="your_api_key_here"
