@@ -1,7 +1,7 @@
 from datetime import date
 
-from pandera.typing.polars import DataFrame
 import polars
+from pandera.typing.polars import DataFrame
 
 from constants import (
     ASK,
@@ -62,10 +62,4 @@ class ThetaDataCleaner:
         cleaned_quotes = cleaned_quotes.filter(
             polars.col(BID_ASK_SPREAD) < self.liquidity_threshold
         )
-        slice_data_per_expiry = {
-            _date_key[0]: OptionSliceSchema.validate(slice_data)
-            for _date_key, slice_data in cleaned_quotes.partition_by(
-                EXPIRATION, as_dict=True
-            ).items()
-        }
-        return slice_data_per_expiry
+        return cleaned_quotes

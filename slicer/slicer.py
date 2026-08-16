@@ -20,6 +20,7 @@ from constants import (
     PUT,
     RIGHT,
     STRIKE,
+    SYMBOL,
 )
 from dates_lib.daycount import get_daycount
 from slicer.schemas.slice_data import OptionSliceSchema
@@ -104,6 +105,7 @@ class Slicer:
         option_slice_data: DataFrame[OptionSliceSchema],
         expiry_date: date,
     ) -> Slice | None:
+        symbol = option_slice_data[SYMBOL].head(1).item()
         ttm = get_daycount(start_date=self.base_date, end_date=expiry_date)
         if ttm < 1 / 365:
             logger.warning(
@@ -148,11 +150,18 @@ class Slicer:
             forward=forward,
             ttm=ttm,
             rate=rate,
+            underlying_ticker=symbol,
         )
 
     def construct_slices(
-        self, option_slice_data_per_expiry: dict[date, DataFrame[OptionSliceSchema]]
-    ):
+        self, option_slice_data: DataFrame[OptionSliceSchema]
+    ) -> list[Slice]:
+        option_slice_data_per_expiry = {
+            _date_key[0]: OptionSliceSchema.validate(slice_data)
+            for _date_key, slice_data in option_slice_data.partition_by(
+                EXPIRATION, as_dict=True
+            ).items()
+        }
         return [
             slice
             for expiry_date, option_slice_data in option_slice_data_per_expiry.items()

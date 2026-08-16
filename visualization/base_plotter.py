@@ -107,6 +107,4 @@ class Plotter(ABC):
 
     def _finalize(self, fig: Figure, ax: Axes) -> tuple[Figure, Axes]:
         plt.tight_layout()
-        plt.savefig("surface.png", dpi=200)
-        plt.show()
         return fig, ax
