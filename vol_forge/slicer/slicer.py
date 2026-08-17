@@ -7,8 +7,8 @@ import polars
 from numpy.typing import NDArray
 from pandera.typing.polars import DataFrame
 
-from black_scholes_lib.black.pricing import get_implied_vol_black
-from constants import (
+from vol_forge.black_scholes_lib.black.pricing import get_implied_vol_black
+from vol_forge.constants import (
     ASK,
     ASK_DIFF,
     BID,
@@ -22,10 +22,10 @@ from constants import (
     STRIKE,
     SYMBOL,
 )
-from dates_lib.daycount import get_daycount
-from slicer.schemas.slice_data import OptionSliceSchema
-from slicer.slice import Slice
-from tiny_types import Strike, TimeToExpiry
+from vol_forge.dates_lib.daycount import get_daycount
+from vol_forge.slicer.schemas.slice_data import OptionSliceSchema
+from vol_forge.slicer.slice import Slice
+from vol_forge.tiny_types import Strike, TimeToExpiry
 
 logger = logging.getLogger(__name__)
 

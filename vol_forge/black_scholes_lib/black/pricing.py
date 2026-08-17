@@ -4,7 +4,7 @@ import numpy as np
 from numpy.typing import NDArray
 from scipy.stats import invgauss
 
-from black_scholes_lib.black_scholes.pricing import black_scholes
+from vol_forge.black_scholes_lib.black_scholes.pricing import black_scholes
 
 warnings.filterwarnings("ignore", module="scipy")
 

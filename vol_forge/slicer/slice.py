@@ -4,7 +4,7 @@ import polars
 from pandera.typing.polars import DataFrame
 from pydantic import BaseModel
 
-from market_data.schemas.constants import (
+from vol_forge.market_data.schemas.constants import (
     COLUMN_ASK_IMPLIED_VOL,
     COLUMN_BASE_DATE,
     COLUMN_BID_IMPLIED_VOL,
@@ -15,8 +15,8 @@ from market_data.schemas.constants import (
     COLUMN_TTM,
     COLUMN_UNDERLYING_TICKER,
 )
-from market_data.schemas.implied_vols import ImpliedVolatilities
-from tiny_types import Strike, TimeToExpiry
+from vol_forge.market_data.schemas.implied_vols import ImpliedVolatilities
+from vol_forge.tiny_types import Strike, TimeToExpiry
 
 
 class Slice(BaseModel):

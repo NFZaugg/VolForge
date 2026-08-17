@@ -2,7 +2,7 @@ import numpy as np
 from numpy.typing import NDArray
 from scipy.stats import norm
 
-from black_scholes_lib.black_scholes.pricing import black_scholes_d1d2
+from vol_forge.black_scholes_lib.black_scholes.pricing import black_scholes_d1d2
 
 
 def bs_delta(

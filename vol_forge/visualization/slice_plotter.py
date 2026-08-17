@@ -2,9 +2,9 @@ import matplotlib.pyplot as plt
 import polars
 from matplotlib.axes import Axes
 
-from constants import ASK, BID, MID, STRIKE
-from slicer.slice import Slice
-from visualization.base_plotter import Plotter
+from vol_forge.constants import ASK, BID, MID, STRIKE
+from vol_forge.slicer.slice import Slice
+from vol_forge.visualization.base_plotter import Plotter
 
 
 class SlicePlotter(Plotter):

@@ -1,6 +1,14 @@
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["vol_forge*"]
+
 [project]
-name = "VolForge"
-version = "0.1.0"
+name = "volForge"
+version = "0.3.0"
 description = "Implied Vol Forging"
 readme = "README.md"
 requires-python = ">=3.13"

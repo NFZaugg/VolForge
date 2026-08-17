@@ -1,7 +1,7 @@
 import numpy as np
 from numpy.typing import NDArray
 
-from black_scholes_lib.black_scholes.greeks import (
+from vol_forge.black_scholes_lib.black_scholes.greeks import (
     bs_delta,
     bs_gamma,
     bs_rho,

@@ -4,8 +4,8 @@ from types import SimpleNamespace
 from matplotlib.axes import Axes
 from matplotlib.figure import Figure
 
-from slicer.slice import Slice
-from visualization.slice_plotter import SlicePlotter
+from vol_forge.slicer.slice import Slice
+from vol_forge.visualization.slice_plotter import SlicePlotter
 
 
 class TestSlicePlotter:

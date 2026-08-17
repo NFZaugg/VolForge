@@ -1,6 +1,6 @@
 import numpy as np
-from scipy.stats import invgauss, norm
 from numpy.typing import NDArray
+from scipy.stats import invgauss, norm
 
 
 def black_scholes_d1d2(

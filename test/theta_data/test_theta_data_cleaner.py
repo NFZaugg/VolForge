@@ -2,8 +2,8 @@ from datetime import date
 
 import polars
 
-from constants import BID_ASK_SPREAD
-from theta_data.theta_data_cleaner import ThetaDataCleaner
+from vol_forge.constants import BID_ASK_SPREAD
+from vol_forge.theta_data.theta_data_cleaner import ThetaDataCleaner
 
 
 class TestThetaDataCleaner:

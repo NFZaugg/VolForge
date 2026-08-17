@@ -4,9 +4,9 @@ import polars
 from matplotlib.patches import Patch
 from mpl_toolkits.mplot3d import Axes3D
 
-from constants import ASK, BID, MID
-from surface.linear_surface import LinearSurface
-from visualization.base_plotter import Plotter
+from vol_forge.constants import ASK, BID, MID
+from vol_forge.surface.linear_surface import LinearSurface
+from vol_forge.visualization.base_plotter import Plotter
 
 
 class SurfacePlotter(Plotter):

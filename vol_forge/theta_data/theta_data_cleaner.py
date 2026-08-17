@@ -3,7 +3,7 @@ from datetime import date
 import polars
 from pandera.typing.polars import DataFrame
 
-from constants import (
+from vol_forge.constants import (
     ASK,
     ASK_SIZE,
     BID,
@@ -17,8 +17,8 @@ from constants import (
     SYMBOL,
     VOLUME,
 )
-from slicer.schemas.slice_data import OptionSliceSchema
-from theta_data.schemas.theta_data_schema import TDHistoricalOptionData
+from vol_forge.slicer.schemas.slice_data import OptionSliceSchema
+from vol_forge.theta_data.schemas.theta_data_schema import TDHistoricalOptionData
 
 RELEVANT_COLUMNS = [
     SYMBOL,

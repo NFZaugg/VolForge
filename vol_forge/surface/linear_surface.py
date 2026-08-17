@@ -8,9 +8,9 @@ from numpy.typing import NDArray
 from pandera.typing.polars import DataFrame
 from scipy.interpolate import LinearNDInterpolator, interp1d
 
-from constants import ASK, BID, MID, STRIKE, TTM
-from forward.forward_curve import LinearForwardCurve
-from market_data.schemas.constants import (
+from vol_forge.constants import ASK, BID, MID, STRIKE, TTM
+from vol_forge.forward.forward_curve import LinearForwardCurve
+from vol_forge.market_data.schemas.constants import (
     COLUMN_ASK_IMPLIED_VOL,
     COLUMN_BID_IMPLIED_VOL,
     COLUMN_EXPIRY_DATE,
@@ -19,9 +19,9 @@ from market_data.schemas.constants import (
     COLUMN_STRIKE,
     COLUMN_TTM,
 )
-from market_data.schemas.implied_vols import ImpliedVolatilities
-from slicer.slice import Slice
-from surface.base_surface import BaseSurface
+from vol_forge.market_data.schemas.implied_vols import ImpliedVolatilities
+from vol_forge.slicer.slice import Slice
+from vol_forge.surface.base_surface import BaseSurface
 
 
 class LinearSurface(BaseSurface):

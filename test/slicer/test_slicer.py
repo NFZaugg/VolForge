@@ -3,8 +3,8 @@ from datetime import date
 import numpy as np
 import polars
 
-from slicer.slicer import Slicer
-from theta_data.theta_data_cleaner import ThetaDataCleaner
+from vol_forge.slicer.slicer import Slicer
+from vol_forge.theta_data.theta_data_cleaner import ThetaDataCleaner
 
 
 class TestSlicer:

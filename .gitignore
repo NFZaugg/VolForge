@@ -8,3 +8,6 @@ __pycache__/
 # uv
 uv.lock
 .python-version
+dist/
+build/
+*.egg-info/

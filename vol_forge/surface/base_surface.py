@@ -5,7 +5,7 @@ from datetime import date
 import numpy as np
 from numpy.typing import NDArray
 
-from forward.forward_curve import LinearForwardCurve
+from vol_forge.forward.forward_curve import LinearForwardCurve
 
 
 class BaseSurface(ABC):

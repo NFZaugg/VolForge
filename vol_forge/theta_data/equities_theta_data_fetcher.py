@@ -6,8 +6,8 @@ from pandera.typing.polars import DataFrame
 from thetadata.client import ThetaClient
 from thetadata.errors import NoDataFoundError
 
-from theta_data.schemas.theta_data_schema import TDHistoricalEquityData
-from theta_data.theta_data_client import ThetaDataClientFactory
+from vol_forge.theta_data.schemas.theta_data_schema import TDHistoricalEquityData
+from vol_forge.theta_data.theta_data_client import ThetaDataClientFactory
 
 logger = logging.getLogger(__name__)
 

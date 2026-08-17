@@ -3,14 +3,14 @@ from datetime import date
 import polars
 from pandera.typing.polars import DataFrame
 
-from market_data.schemas.implied_vols import ImpliedVolatilities
-from slicer.slice import Slice
-from slicer.slicer import Slicer
-from surface.linear_surface import LinearSurface
-from theta_data.options_theta_data_fetcher import OptionsThetaDataFetcher
-from theta_data.theta_data_cleaner import ThetaDataCleaner
-from visualization.slice_plotter import SlicePlotter
-from visualization.surface_plotter import SurfacePlotter
+from vol_forge.market_data.schemas.implied_vols import ImpliedVolatilities
+from vol_forge.slicer.slice import Slice
+from vol_forge.slicer.slicer import Slicer
+from vol_forge.surface.linear_surface import LinearSurface
+from vol_forge.theta_data.options_theta_data_fetcher import OptionsThetaDataFetcher
+from vol_forge.theta_data.theta_data_cleaner import ThetaDataCleaner
+from vol_forge.visualization.slice_plotter import SlicePlotter
+from vol_forge.visualization.surface_plotter import SurfacePlotter
 
 
 class VolForgeClient:
@@ -42,10 +42,14 @@ class VolForgeClient:
         return self._slice_plotter.plot(symbol, slice)
 
     def plot_surface(
-        self, symbol: str, value_date: date, min_date: date, max_date: date
+        self,
+        symbol: str,
+        value_date: date,
+        min_expiration_date: date,
+        max_expiration_date: date,
     ) -> DataFrame[ImpliedVolatilities]:
         slices = self._fetch_iv_slices_many_expirations(
-            symbol, value_date, min_date, max_date
+            symbol, value_date, min_expiration_date, max_expiration_date
         )
         spot_price = self._fetcher.fetch_eod_close(symbol=symbol, value_date=value_date)
         surface = LinearSurface.construct_from_slices(value_date, spot_price, slices)

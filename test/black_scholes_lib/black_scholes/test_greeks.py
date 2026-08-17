@@ -12,8 +12,8 @@ Strategy:
 import numpy as np
 import pytest
 
-from black_scholes_lib.black_scholes.pricing import black_scholes
-from black_scholes_lib.black_scholes.greeks import (
+from vol_forge.black_scholes_lib.black_scholes.pricing import black_scholes
+from vol_forge.black_scholes_lib.black_scholes.greeks import (
     bs_delta,
     bs_gamma,
     bs_vega,

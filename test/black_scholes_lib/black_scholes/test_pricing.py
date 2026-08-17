@@ -1,8 +1,8 @@
 import numpy as np
-from black_scholes_lib.black.pricing import (
+from vol_forge.black_scholes_lib.black.pricing import (
     black_scholes,
 )
-from black_scholes_lib.black_scholes.pricing import get_implied_vol_bs
+from vol_forge.black_scholes_lib.black_scholes.pricing import get_implied_vol_bs
 
 
 class TestBlackScholesPricing:

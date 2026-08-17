@@ -1,6 +1,6 @@
 from thetadata.client import ThetaClient
 
-from config.config import config
+from vol_forge.config.config import config
 
 
 class ThetaDataClientFactory:

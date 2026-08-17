@@ -2,7 +2,7 @@ from datetime import date
 
 from matplotlib import pyplot as plt
 
-from client import VolForgeClient
+from vol_forge import VolForgeClient
 
 if __name__ == "__main__":
     base_date = date(2026, 7, 24)
