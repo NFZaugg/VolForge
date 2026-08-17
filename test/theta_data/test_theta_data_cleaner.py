@@ -2,7 +2,7 @@ from datetime import date
 
 import polars
 
-from vol_forge.constants import BID_ASK_SPREAD
+from vol_forge.constants import BID_ASK_SPREAD, EXPIRATION
 from vol_forge.theta_data.theta_data_cleaner import ThetaDataCleaner
 
 
@@ -15,7 +15,7 @@ class TestThetaDataCleaner:
             raw_data
         )
 
-        assert len(cleaned_data_per_expiry) == 1
-        key = list(cleaned_data_per_expiry.keys())[0]
-        assert key == date(2026, 8, 19)
-        assert (cleaned_data_per_expiry[key][BID_ASK_SPREAD] < 0.5).all()
+        assert len(cleaned_data_per_expiry) == 87
+
+        assert cleaned_data_per_expiry[EXPIRATION].head(1).item() == date(2026, 8, 19)
+        assert (cleaned_data_per_expiry[BID_ASK_SPREAD] < 0.5).all()
