@@ -24,4 +24,4 @@ Examples
 
 <img width="2000" height="1200" alt="surface" src="https://github.com/user-attachments/assets/bc4befa6-aabd-4c62-bf0d-d8453b3a1814" />
 
-May be used freely for non-commerical / research projects
+May be used freely for non-commerical / research projects. For suggestions please raise in issue in the Github. For questions and requests for collaboration, reach out to n.f.zaugg@uu.nl
